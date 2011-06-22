@@ -1,0 +1,18 @@
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\bin\Debug\EasyKin.exe
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\bin\Debug\EasyKin.pdb
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\EasyKin.frmMain.resources
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\EasyKin.Properties.Resources.resources
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\EasyKin.exe
+C:\Users\CESM\AppData\Local\Temporary Projects\EasyKin\obj\x86\Debug\EasyKin.pdb
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\EasyKin.exe
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\EasyKin.pdb
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\bin\Debug\EasyKin.exe
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\bin\Debug\EasyKin.pdb
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\EasyKin.frmMain.resources
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\EasyKin.Properties.Resources.resources
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.write.1.tlog
