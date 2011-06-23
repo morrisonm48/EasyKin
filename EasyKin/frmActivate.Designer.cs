@@ -59,6 +59,7 @@
             this.Controls.Add(this.ibxVideo);
             this.Name = "frmActivate";
             this.Text = "EasyKin";
+            this.Load += new System.EventHandler(this.frmActivate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ibxVideo)).EndInit();
             this.ResumeLayout(false);
 

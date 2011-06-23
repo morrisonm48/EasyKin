@@ -15,9 +15,33 @@ namespace morrisonm48.EasyKin
 {
     public partial class frmActivate : Form
     {
+        Runtime nui = new Runtime();
+
         public frmActivate()
         {
             InitializeComponent();
         }
+
+        private void frmActivate_Load(object sender, EventArgs e)
+        {
+            //initialize skeletal tracking
+            nui.Initialize(RuntimeOptions.UseSkeletalTracking | RuntimeOptions.UseDepth);
+            //smooth skeletal jitter
+            nui.SkeletonEngine.TransformSmooth = true;
+            var parameters = new TransformSmoothParameters
+            {
+                Smoothing = 0.75f,
+                Correction = 0.0f,
+                Prediction = 0.0f,
+                JitterRadius = 0.05f,
+                MaxDeviationRadius = 0.04f
+            };
+            nui.SkeletonEngine.SmoothParameters = parameters;
+            //get ready to receive skeletal data
+            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady;
+        }
+
+
+
     }
 }
