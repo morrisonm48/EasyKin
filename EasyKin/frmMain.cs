@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EasyKin
+namespace morrisonm48.EasyKin
 {
     public partial class frmMain : Form
     {

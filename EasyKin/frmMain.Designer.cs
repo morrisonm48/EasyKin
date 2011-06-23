@@ -1,4 +1,4 @@
-﻿namespace EasyKin
+﻿namespace morrisonm48.EasyKin
 {
     partial class frmMain
     {

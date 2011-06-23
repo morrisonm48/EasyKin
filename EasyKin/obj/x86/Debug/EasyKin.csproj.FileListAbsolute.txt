@@ -16,3 +16,12 @@ C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debu
 C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\EasyKin.Properties.Resources.resources
 C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\CESM\Documents\Visual Studio 2010\Projects\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\EasyKin.exe
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\EasyKin.pdb
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\morrisonm48.EasyKin.frmMain.resources
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\morrisonm48.EasyKin.Properties.Resources.resources
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\EasyKin.exe
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\EasyKin.pdb
