@@ -55,6 +55,7 @@
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
             this.btnSealCode = new System.Windows.Forms.Button();
+            this.btnActivate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,7 +69,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(690, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,7 +132,7 @@
             this.groupBox1.Controls.Add(this.cbxPartModifier);
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 99);
+            this.groupBox1.Size = new System.Drawing.Size(300, 99);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "When you move your:";
@@ -141,15 +142,15 @@
             this.cbxXY.FormattingEnabled = true;
             this.cbxXY.Location = new System.Drawing.Point(6, 64);
             this.cbxXY.Name = "cbxXY";
-            this.cbxXY.Size = new System.Drawing.Size(121, 21);
+            this.cbxXY.Size = new System.Drawing.Size(140, 21);
             this.cbxXY.TabIndex = 6;
             this.cbxXY.SelectedIndexChanged += new System.EventHandler(this.cbxXY_SelectedIndexChanged);
             // 
             // tbxCoordinate
             // 
-            this.tbxCoordinate.Location = new System.Drawing.Point(133, 65);
+            this.tbxCoordinate.Location = new System.Drawing.Point(152, 64);
             this.tbxCoordinate.Name = "tbxCoordinate";
-            this.tbxCoordinate.Size = new System.Drawing.Size(100, 20);
+            this.tbxCoordinate.Size = new System.Drawing.Size(140, 20);
             this.tbxCoordinate.TabIndex = 5;
             // 
             // label1
@@ -164,9 +165,9 @@
             // cbxBodyPart
             // 
             this.cbxBodyPart.FormattingEnabled = true;
-            this.cbxBodyPart.Location = new System.Drawing.Point(134, 20);
+            this.cbxBodyPart.Location = new System.Drawing.Point(153, 20);
             this.cbxBodyPart.Name = "cbxBodyPart";
-            this.cbxBodyPart.Size = new System.Drawing.Size(121, 21);
+            this.cbxBodyPart.Size = new System.Drawing.Size(140, 21);
             this.cbxBodyPart.TabIndex = 1;
             this.cbxBodyPart.SelectionChangeCommitted += new System.EventHandler(this.cbxBodyPart_SelectionChangeCommitted);
             // 
@@ -176,7 +177,7 @@
             this.cbxPartModifier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbxPartModifier.Location = new System.Drawing.Point(7, 20);
             this.cbxPartModifier.Name = "cbxPartModifier";
-            this.cbxPartModifier.Size = new System.Drawing.Size(121, 21);
+            this.cbxPartModifier.Size = new System.Drawing.Size(140, 21);
             this.cbxPartModifier.TabIndex = 0;
             // 
             // groupBox2
@@ -185,9 +186,9 @@
             this.groupBox2.Controls.Add(this.cbxButtonAction);
             this.groupBox2.Controls.Add(this.cbxPeriphButton);
             this.groupBox2.Controls.Add(this.cbxPeriph);
-            this.groupBox2.Location = new System.Drawing.Point(298, 28);
+            this.groupBox2.Location = new System.Drawing.Point(378, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(264, 99);
+            this.groupBox2.Size = new System.Drawing.Size(300, 99);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "The computer should think you did this:";
@@ -206,7 +207,7 @@
             this.cbxButtonAction.FormattingEnabled = true;
             this.cbxButtonAction.Location = new System.Drawing.Point(6, 20);
             this.cbxButtonAction.Name = "cbxButtonAction";
-            this.cbxButtonAction.Size = new System.Drawing.Size(121, 21);
+            this.cbxButtonAction.Size = new System.Drawing.Size(140, 21);
             this.cbxButtonAction.TabIndex = 2;
             // 
             // cbxPeriphButton
@@ -214,17 +215,17 @@
             this.cbxPeriphButton.DropDownHeight = 80;
             this.cbxPeriphButton.FormattingEnabled = true;
             this.cbxPeriphButton.IntegralHeight = false;
-            this.cbxPeriphButton.Location = new System.Drawing.Point(133, 65);
+            this.cbxPeriphButton.Location = new System.Drawing.Point(152, 64);
             this.cbxPeriphButton.Name = "cbxPeriphButton";
-            this.cbxPeriphButton.Size = new System.Drawing.Size(121, 21);
+            this.cbxPeriphButton.Size = new System.Drawing.Size(140, 21);
             this.cbxPeriphButton.TabIndex = 1;
             // 
             // cbxPeriph
             // 
             this.cbxPeriph.FormattingEnabled = true;
-            this.cbxPeriph.Location = new System.Drawing.Point(6, 65);
+            this.cbxPeriph.Location = new System.Drawing.Point(6, 64);
             this.cbxPeriph.Name = "cbxPeriph";
-            this.cbxPeriph.Size = new System.Drawing.Size(121, 21);
+            this.cbxPeriph.Size = new System.Drawing.Size(140, 21);
             this.cbxPeriph.TabIndex = 0;
             this.cbxPeriph.SelectedIndexChanged += new System.EventHandler(this.cbxPeriph_SelectedIndexChanged);
             // 
@@ -232,7 +233,7 @@
             // 
             this.btnGenerateCode.Location = new System.Drawing.Point(20, 133);
             this.btnGenerateCode.Name = "btnGenerateCode";
-            this.btnGenerateCode.Size = new System.Drawing.Size(532, 23);
+            this.btnGenerateCode.Size = new System.Drawing.Size(658, 23);
             this.btnGenerateCode.TabIndex = 3;
             this.btnGenerateCode.Text = "Automagic Code Generation Button!";
             this.btnGenerateCode.UseVisualStyleBackColor = true;
@@ -243,7 +244,7 @@
             this.groupBox3.Controls.Add(this.rtbGeneratedCode);
             this.groupBox3.Location = new System.Drawing.Point(13, 162);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(549, 300);
+            this.groupBox3.Size = new System.Drawing.Size(665, 300);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Generated Code ( In C# )";
@@ -254,13 +255,13 @@
             this.rtbGeneratedCode.Name = "rtbGeneratedCode";
             this.rtbGeneratedCode.ReadOnly = true;
             this.rtbGeneratedCode.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtbGeneratedCode.Size = new System.Drawing.Size(536, 274);
+            this.rtbGeneratedCode.Size = new System.Drawing.Size(652, 274);
             this.rtbGeneratedCode.TabIndex = 0;
             this.rtbGeneratedCode.Text = "";
             // 
             // btnSaveCode
             // 
-            this.btnSaveCode.Location = new System.Drawing.Point(434, 470);
+            this.btnSaveCode.Location = new System.Drawing.Point(550, 470);
             this.btnSaveCode.Name = "btnSaveCode";
             this.btnSaveCode.Size = new System.Drawing.Size(128, 23);
             this.btnSaveCode.TabIndex = 5;
@@ -290,7 +291,7 @@
             // 
             // btnSealCode
             // 
-            this.btnSealCode.Location = new System.Drawing.Point(300, 470);
+            this.btnSealCode.Location = new System.Drawing.Point(416, 470);
             this.btnSealCode.Name = "btnSealCode";
             this.btnSealCode.Size = new System.Drawing.Size(128, 23);
             this.btnSealCode.TabIndex = 8;
@@ -298,11 +299,23 @@
             this.btnSealCode.UseVisualStyleBackColor = true;
             this.btnSealCode.Click += new System.EventHandler(this.btnSealCode_Click_1);
             // 
+            // btnActivate
+            // 
+            this.btnActivate.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnActivate.Location = new System.Drawing.Point(313, 470);
+            this.btnActivate.Name = "btnActivate";
+            this.btnActivate.Size = new System.Drawing.Size(75, 23);
+            this.btnActivate.TabIndex = 9;
+            this.btnActivate.Text = "Start";
+            this.btnActivate.UseVisualStyleBackColor = false;
+            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 505);
+            this.ClientSize = new System.Drawing.Size(690, 505);
+            this.Controls.Add(this.btnActivate);
             this.Controls.Add(this.btnSealCode);
             this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.btnRestore);
@@ -357,6 +370,7 @@
         private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.Button btnSealCode;
         private System.Windows.Forms.ComboBox cbxXY;
+        private System.Windows.Forms.Button btnActivate;
     }
 }
 

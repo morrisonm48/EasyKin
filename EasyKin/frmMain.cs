@@ -34,7 +34,7 @@ using System.Windows.Shapes;
 using System.Text;
 using Microsoft.Research.Kinect.Nui;
 using Microsoft.Research.Kinect.Audio;
-using Coding4Fun.Kinect.Wpf;
+using Coding4Fun.Kinect.Winform;
 using WindowsInput;
 //**********************Change WpfApplication1 to the name of your solution************
 namespace WpfApplication1
@@ -56,7 +56,7 @@ namespace WpfApplication1
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //initialize skeletal tracking
-            nui.Initialize(RuntimeOptions.UseSkeletalTracking);
+            nui.Initialize(RuntimeOptions.UseSkeletalTracking | RuntimeOptions.UseDepth);
             //smooth skeletal jitter
             nui.SkeletonEngine.TransformSmooth = true;
             var parameters = new TransformSmoothParameters
@@ -69,7 +69,7 @@ namespace WpfApplication1
             };
             nui.SkeletonEngine.SmoothParameters = parameters;
             //get ready to receive skeletal data
-            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady);
+            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady;
         }
 
         //once there is a skeletal lock, do stuff
@@ -530,6 +530,11 @@ Make sure all enabled boxes are filled out.", "Oops!");
             {
                 rtbGeneratedCode.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+
         }             
     }
 }
