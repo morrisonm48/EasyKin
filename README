@@ -1,1 +1,11 @@
-This is the README for EasyKin
+README EasyKin v_0.0.2
+
+**********
+**********
+This program provides a dropdown-centric GUI for binding user movements to keyboard and mouseclick events that affect the active window.
+**********
+**********
+
+In the first iteration of this application, the code necessary to drive the Kinect is generated through the GUI. Using this code, the user is to create a new WPF using Visual Studio C# Express, add the neccessary references, then copy and paste this code to the main form in their created application.
+
+When the application utilizes the generated Kinect code inside itself, the application will reach version 0.1.0 status.
