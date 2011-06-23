@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Research.Kinect.Nui;
 using Microsoft.Research.Kinect.Audio;
-using Coding4Fun.Kinect.Winform;
+using Coding4Fun.Kinect.WinForm;
 using WindowsInput;
 
 namespace morrisonm48.EasyKin
