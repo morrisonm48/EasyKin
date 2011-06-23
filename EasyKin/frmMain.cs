@@ -17,6 +17,7 @@ namespace morrisonm48.EasyKin
 // Then add a new reference to Microsoft.Research.Kinect from the .NET filter
 // You also need to make sure to add InputSimulator and Coding4Fun.Kinect.Wpf through the browse menu
 // (you might need to download those)
+// Make sure to copy this into the MainForm code in Wpf view as well: Loaded=''Window_Loaded'' (where ''== quotation marks)
 // After that, select everything in this text box, copy and paste it into MainWindow.xaml.cs
 using System;
 using System.Collections.Generic;
