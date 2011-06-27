@@ -6,13 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.CodeDom.Compiler;
+using System.Diagnostics;
+using Microsoft.CSharp;
 
 namespace morrisonm48.EasyKin
 {
     public partial class frmMain : Form
     {
+        string strCode;
         string strPregeneratedCode = @"
-
 // In order to run this code, create a new wpf application in Visual Studio C#
 // Then add a new reference to Microsoft.Research.Kinect from the .NET filter
 // You also need to make sure to add InputSimulator and Coding4Fun.Kinect.Wpf through the browse menu
@@ -21,55 +24,49 @@ namespace morrisonm48.EasyKin
 // After that, select everything in this text box, copy and paste it into MainWindow.xaml.cs
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 using System.Text;
 using Microsoft.Research.Kinect.Nui;
 using Microsoft.Research.Kinect.Audio;
-using Coding4Fun.Kinect.Winform;
+using Coding4Fun.Kinect.WinForm;
 using WindowsInput;
 //**********************Change WpfApplication1 to the name of your solution************
-namespace WpfApplication1
+namespace morrisonm48.EasyKin
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class frmCode : Form
     {
-
         //refernce the Kinect runtime
         Runtime nui = new Runtime();
 
-        public MainWindow()
+        public frmCode()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void frmCode_Load(object sender, EventArgs e)
         {
             //initialize skeletal tracking
             nui.Initialize(RuntimeOptions.UseSkeletalTracking | RuntimeOptions.UseDepth);
             //smooth skeletal jitter
             nui.SkeletonEngine.TransformSmooth = true;
-            var parameters = new TransformSmoothParameters
-            {
-                Smoothing = 0.75f,
-                Correction = 0.0f,
-                Prediction = 0.0f,
-                JitterRadius = 0.05f,
-                MaxDeviationRadius = 0.04f
-            };
+            var parameters = new TransformSmoothParameters();
+
+            parameters.Smoothing = 0.75f;
+            parameters.Correction = 0.0f;
+            parameters.Prediction = 0.0f;
+            parameters.JitterRadius = 0.05f;
+            parameters.MaxDeviationRadius = 0.04f;
+            
             nui.SkeletonEngine.SmoothParameters = parameters;
             //get ready to receive skeletal data
-            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady;
+            nui.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(nui_SkeletonFrameReady);
         }
 
         //once there is a skeletal lock, do stuff
@@ -511,6 +508,7 @@ Make sure all enabled boxes are filled out.", "Oops!");
             if (rtbGeneratedCode.Lines.Contains("            nui.Uninitialize();") == false)
             {
                 rtbGeneratedCode.AppendText(@"
+ 
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -534,8 +532,47 @@ Make sure all enabled boxes are filled out.", "Oops!");
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
+            CodeDomProvider codeProvider = CodeDomProvider.CreateProvider("CSharp");
+            Button ButtonObject = (Button)sender;
 
-            
+            System.CodeDom.Compiler.CompilerParameters parameters = new CompilerParameters();
+            //Make sure we generate an EXE, not a DLL
+            parameters.GenerateInMemory = true;
+            parameters.ReferencedAssemblies.Add("Coding4Fun.Kinect.WinForm.dll");
+            parameters.ReferencedAssemblies.Add("InputSimulator.dll");
+            parameters.ReferencedAssemblies.Add("Microsoft.Research.Kinect.dll");
+            parameters.ReferencedAssemblies.Add("System.dll");
+            parameters.ReferencedAssemblies.Add("System.Core.dll");
+            parameters.ReferencedAssemblies.Add("System.Data.dll");
+            parameters.ReferencedAssemblies.Add("System.Data.DataSetExtensions.dll");
+            parameters.ReferencedAssemblies.Add("System.Deployment.dll");
+            parameters.ReferencedAssemblies.Add("System.Drawing.dll");
+            parameters.ReferencedAssemblies.Add("System.Windows.Forms.dll");
+            parameters.ReferencedAssemblies.Add("System.Xml.dll");
+            parameters.ReferencedAssemblies.Add("System.Xml.Linq.dll");
+
+            CompilerResults results = codeProvider.CompileAssemblyFromSource(parameters, rtbGeneratedCode.Text);
+
+            if (results.Errors.Count == 0)
+            {
+                // I'm stuck here
+                // Not sure how to activate the compiled code
+                // Will need to spend more time on this bit
+                // Copying code will still work
+                // But the program still isn't stand-alone
+            }
+            else
+            {
+                foreach (CompilerError CompErr in results.Errors)
+                {
+                strCode = strCode +
+                        "Line number " + CompErr.Line +
+                        ", Error Number: " + CompErr.ErrorNumber +
+                        ", '" + CompErr.ErrorText + ";" +
+                        Environment.NewLine + Environment.NewLine;
+                }
+                MessageBox.Show(strCode);
+            }
         }             
     }
 }

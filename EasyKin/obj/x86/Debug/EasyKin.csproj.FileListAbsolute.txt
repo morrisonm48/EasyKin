@@ -25,3 +25,9 @@ C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\CESM\EasyKin\EasyKin\bin\Debug\EasyKin.exe
 C:\Users\CESM\EasyKin\EasyKin\bin\Debug\EasyKin.pdb
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\Coding4Fun.Kinect.WinForm.dll
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\InputSimulator.dll
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\Coding4Fun.Kinect.WinForm.pdb
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\InputSimulator.pdb
+C:\Users\CESM\EasyKin\EasyKin\bin\Debug\InputSimulator.xml
+C:\Users\CESM\EasyKin\EasyKin\obj\x86\Debug\morrisonm48.EasyKin.frmActivate.resources

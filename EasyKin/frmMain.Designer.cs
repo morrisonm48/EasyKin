@@ -302,6 +302,7 @@
             // btnActivate
             // 
             this.btnActivate.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnActivate.Enabled = false;
             this.btnActivate.Location = new System.Drawing.Point(313, 470);
             this.btnActivate.Name = "btnActivate";
             this.btnActivate.Size = new System.Drawing.Size(75, 23);
