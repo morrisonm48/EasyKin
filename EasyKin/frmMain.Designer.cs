@@ -54,8 +54,9 @@
             this.btnSaveCode = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
-            this.btnSealCode = new System.Windows.Forms.Button();
             this.btnActivate = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -69,6 +70,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.menuStrip1.Size = new System.Drawing.Size(690, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -289,16 +291,6 @@
             this.btnUndo.UseVisualStyleBackColor = true;
             this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
-            // btnSealCode
-            // 
-            this.btnSealCode.Location = new System.Drawing.Point(416, 470);
-            this.btnSealCode.Name = "btnSealCode";
-            this.btnSealCode.Size = new System.Drawing.Size(128, 23);
-            this.btnSealCode.TabIndex = 8;
-            this.btnSealCode.Text = "Finish Code";
-            this.btnSealCode.UseVisualStyleBackColor = true;
-            this.btnSealCode.Click += new System.EventHandler(this.btnSealCode_Click_1);
-            // 
             // btnActivate
             // 
             this.btnActivate.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -311,13 +303,27 @@
             this.btnActivate.UseVisualStyleBackColor = false;
             this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(416, 470);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(128, 23);
+            this.btnLoad.TabIndex = 10;
+            this.btnLoad.Text = "Load Code";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 505);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnActivate);
-            this.Controls.Add(this.btnSealCode);
             this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnSaveCode);
@@ -327,6 +333,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(706, 543);
+            this.MinimumSize = new System.Drawing.Size(706, 543);
             this.Name = "frmMain";
             this.Text = "EasyKin Visual Kinect Programmer";
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -369,9 +377,10 @@
         private System.Windows.Forms.RichTextBox rtbGeneratedCode;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnUndo;
-        private System.Windows.Forms.Button btnSealCode;
         private System.Windows.Forms.ComboBox cbxXY;
         private System.Windows.Forms.Button btnActivate;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

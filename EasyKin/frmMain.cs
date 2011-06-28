@@ -503,7 +503,34 @@ Make sure all enabled boxes are filled out.", "Oops!");
             rtbGeneratedCode.Lines = stckDeleteOut.ToArray();
         }
 
-        private void btnSealCode_Click_1(object sender, EventArgs e)
+//        private void btnSealCode_Click_1(object sender, EventArgs e)
+//        {
+//            if (rtbGeneratedCode.Lines.Contains("            nui.Uninitialize();") == false)
+//            {
+//                rtbGeneratedCode.AppendText(@"
+// 
+//        }
+//
+//        private void Window_Closed(object sender, EventArgs e)
+//        {
+//            nui.Uninitialize();
+//        }
+//    }
+//}");
+//            }
+//        }
+
+        private void btnSaveCode_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "EasyKin Configurations (*.kcfg)|*.kcfg";
+
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
+            {
+                rtbGeneratedCode.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+            }
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
         {
             if (rtbGeneratedCode.Lines.Contains("            nui.Uninitialize();") == false)
             {
@@ -518,20 +545,7 @@ Make sure all enabled boxes are filled out.", "Oops!");
     }
 }");
             }
-        }
 
-        private void btnSaveCode_Click(object sender, EventArgs e)
-        {
-            saveFileDialog1.Filter = "EasyKin Configurations (*.kcfg)|*.kcfg";
-
-            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFileDialog1.FileName.Length > 0)
-            {
-                rtbGeneratedCode.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
-            }
-        }
-
-        private void btnActivate_Click(object sender, EventArgs e)
-        {
             CodeDomProvider codeProvider = CodeDomProvider.CreateProvider("CSharp");
             Button ButtonObject = (Button)sender;
 
@@ -572,6 +586,16 @@ Make sure all enabled boxes are filled out.", "Oops!");
                         Environment.NewLine + Environment.NewLine;
                 }
                 MessageBox.Show(strCode);
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "EasyKin Configurations (*.kcfg)|*.kcfg";
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK && openFileDialog1.FileName.Length > 0)
+            {
+                rtbGeneratedCode.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
         }             
     }
